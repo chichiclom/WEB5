@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #17233a;
+  background: #f4f7fb;
+}
+
+.page-width {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 32px 0;
+  color: #ffffff;
+  background: #15558a;
+}
+
+.course-name {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(26px, 5vw, 38px);
+  line-height: 1.2;
+}
+
+main {
+  flex: 1;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.calculator {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #d7e1eb;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(20, 61, 92, 0.08);
+}
+
+h2 {
+  margin: 0 0 8px;
+  color: #0c4f82;
+  font-size: 28px;
+}
+
+.intro {
+  margin: 0 0 24px;
+  color: #536174;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 700;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  min-height: 46px;
+  font: inherit;
+  border-radius: 8px;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  color: #17233a;
+  background: #ffffff;
+  border: 1px solid #9fb2c5;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid rgba(21, 85, 138, 0.16);
+  border-color: #15558a;
+}
+
+button {
+  padding: 10px 18px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #15558a;
+  border: 0;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: #0d436f;
+}
+
+.result {
+  min-height: 28px;
+  margin: 22px 0 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.result:empty {
+  display: none;
+}
+
+.result.success {
+  color: #164f2b;
+  background: #e9f7ee;
+  border: 1px solid #9ed2ad;
+}
+
+.result.error {
+  color: #8b1e1e;
+  background: #fff0f0;
+  border: 1px solid #e1a5a5;
+}
+
+.site-footer {
+  padding: 20px 0;
+  color: #4b5a6b;
+  background: #e7eef5;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .page-width {
+    width: min(100% - 20px, 900px);
+  }
+
+  .site-header {
+    padding: 24px 0;
+  }
+
+  main {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .calculator {
+    padding: 20px;
+  }
+}

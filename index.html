@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB-разработка — Задание 5</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width">
+      <p class="course-name">Разработка пользовательского Web-интерфейса</p>
+      <h1>Задание 5 — калькулятор стоимости заказа</h1>
+    </div>
+  </header>
+
+  <main class="page-width">
+    <section class="calculator" aria-labelledby="calculator-title">
+      <h2 id="calculator-title">Калькулятор заказа</h2>
+      <p class="intro">Выберите товар, укажите количество и нажмите кнопку подсчёта стоимости.</p>
+
+      <form id="order-form" novalidate>
+        <div class="field">
+          <label for="quantity">Количество товара:</label>
+          <input
+            id="quantity"
+            name="quantity"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="Например, 2"
+          >
+        </div>
+
+        <div class="field">
+          <label for="product">Товар:</label>
+          <select id="product" name="product">
+            <option value="1500">Компьютерная мышь — 1500 ₽</option>
+            <option value="3000">Клавиатура — 3000 ₽</option>
+            <option value="5000">Наушники — 5000 ₽</option>
+          </select>
+        </div>
+
+        <button type="submit">Рассчитать стоимость</button>
+      </form>
+
+      <p id="result" class="result" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width">
+      <p>WEB-разработка — Задание 5</p>
+    </div>
+  </footer>
+</body>
+</html>
